@@ -1,7 +1,7 @@
 01demodockerfile:
   build:
     image: 01demodockerfile
-    dockerfile_path: 01.dockerfile/Dockerfile
+    dockerfile: 01.dockerfile/Dockerfile
 01demodockerfiledockercompose:
   build: ./01.dockerfile/
 01demohub:
@@ -9,14 +9,14 @@
 02demo:
   build:
     image: 02myapp
-    dockerfile_path: Dockerfile
-    path: 02.redis/
+    dockerfile: Dockerfile
+    context: 02.redis/
   links:
     - redis
 03demo:
   build:
     image: 03myapp
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
     path: 03.redis-postgres/
   links:
     - redis
@@ -34,8 +34,8 @@
 07write:
   build:
     image: 07demowrite
-    dockerfile_path: Dockerfile
-    path: 07.volumes/
+    dockerfile: Dockerfile
+    context: 07.volumes/
   volumes_from:
     - 07data
 07read:
@@ -106,8 +106,8 @@
 19demo:
   build:
     image: quay.io/codeship/codeship-tool-examples
-    dockerfile_path: Dockerfile
-    path: 19.dockercfg-service
+    dockerfile: Dockerfile
+    context: 19.dockercfg-service
 19dockercfg_generator:
   build: 
     dockerfile_path: Dockerfile.generator
