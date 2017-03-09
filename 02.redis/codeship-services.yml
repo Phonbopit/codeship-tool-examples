@@ -1,8 +1,8 @@
 demo:
   build:
     image: myapp
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   links:
     - redis
 redis:
-  image: redis:2.8.19
+  image: redis:3.0
