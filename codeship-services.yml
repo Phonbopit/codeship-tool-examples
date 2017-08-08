@@ -2,6 +2,8 @@
   build:
     image: 01demodockerfile
     dockerfile_path: 01.dockerfile/Dockerfile
+  cached: true
+  default_cache_branch: gm/jetter-tag(staging-same-fallback)
 01demodockerfiledockercompose:
   build: ./01.dockerfile/
 01demohub:
