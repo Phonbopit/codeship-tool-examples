@@ -203,4 +203,4 @@
   command: ./wait.sh
 - name: 24
   service: 24healthchecks
-  command: bundle exec ruby check.rb
+  command: ./check.sh

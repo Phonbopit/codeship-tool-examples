@@ -140,7 +140,7 @@
     path: 24.healthchecks
     dockerfile: Dockerfile
   depends_on:
-    - postgres_healthcheck
+    - elasticsearch
 redis:
   image: redis:3.2.8
 postgres:
@@ -153,5 +153,5 @@ adddocker:
 server:
   image: python
   command: python3 -m http.server
-postgres_healthcheck:
-  image: healthcheck/postgres
+elasticsearch:
+  image: healthcheck/elasticsearch

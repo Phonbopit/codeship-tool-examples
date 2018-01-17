@@ -1,3 +1,2 @@
-- name: ruby
-  service: demo
-  command: bundle exec ruby check.rb
+- service: app
+  command: ./check.sh

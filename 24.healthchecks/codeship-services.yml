@@ -1,8 +1,6 @@
-postgres_healthcheck:
-   image: healthcheck/postgres
-demo:
-  build:
-    image: myapp
-    dockerfile_path: Dockerfile
+elasticsearch:
+   image: healthcheck/elasticsearch
+app:
+  build: .
   depends_on:
-    - postgres_healthcheck
+    - elasticsearch
