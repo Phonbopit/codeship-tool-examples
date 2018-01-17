@@ -1,0 +1,8 @@
+postgres:
+   image: healthcheck/postgres
+demo:
+  build:
+    image: myapp
+    dockerfile_path: Dockerfile
+  depends_on:
+    - postgres
